@@ -1,1 +1,1 @@
-## My reimplementation of Joel Grus' deep learning library in python 3.6 for educational purposes.
+## My reimplementation of Joel Grus' deep learning library in python 3.6 for educational purposes. Enjoy!
