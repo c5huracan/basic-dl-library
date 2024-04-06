@@ -1,5 +1,5 @@
 """
-This is the loss function: Total Squred Error
+This is the loss function: MSE actually implements Total Squared Error, for now.
 """
 
 import numpy as np
