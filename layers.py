@@ -42,8 +42,15 @@ class Linear(Layer):
 
     def backward(self, grad: Tensor) -> Tensor:
         """
-        if y = f(x) and x = a * b + c
+        if y = f(x) = a * b + c
+        then dy/da = f'(x) * b
+        and dy/db = f'(x) * a
+        and dy/dc = f'(x)
+
+        if y = f(x) and x = a @ b + c
         then dy/da = f'(x) @ b.T
+        and dy/db = f'(x) @ a.T
+        and dy/dc = f'(x)
         """
         self.grads["w"] = self.inputs.T @ grad
         self.grads["b"] = np.sum(grad, axis=0)
