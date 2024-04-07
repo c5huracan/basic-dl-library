@@ -55,3 +55,8 @@ class Linear(Layer):
         self.grads["w"] = self.inputs.T @ grad
         self.grads["b"] = np.sum(grad, axis=0)
         return grad @ self.params["w"].T
+
+
+F = Callable[[Tensor], Tensor]
+
+
