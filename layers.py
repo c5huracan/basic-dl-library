@@ -71,7 +71,10 @@ class Activation(Layer):
 
     def forward(self, inputs: Tensor) -> Tensor:
         self.inputs = inputs
-        return self.f(inputs) 
+        return self.f(inputs)
+
+    def backward(self, grad: Tensor) -> Tensor
+        return self.f_prime(self.inputs) * grad
 
 
 
