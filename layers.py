@@ -83,5 +83,8 @@ class Activation(Layer):
 def tanh(x: Tensor) -> Tensor:
     return np.tanh(x)
 
+def tanh_prime(x: Tensor) -> Tensor:
+    y = tanh(x)
+    return 1 - y ** 2
 
 
