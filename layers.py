@@ -73,8 +73,15 @@ class Activation(Layer):
         self.inputs = inputs
         return self.f(inputs)
 
-    def backward(self, grad: Tensor) -> Tensor
+    def backward(self, grad: Tensor) -> Tensor:
+        """
+        if y = f(x) and x = g(z)
+        then dy/dz = f'(x) * g'(z)
+        """
         return self.f_prime(self.inputs) * grad
+
+def tanh(x: Tensor) -> Tensor:
+    return np.tanh(x)
 
 
 
