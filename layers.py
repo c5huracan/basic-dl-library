@@ -40,7 +40,7 @@ class Linear(Layer):
         """
         outputs = inputs @ w +b
         """
-        self.inputs = inputs
+        self.inputs = inputs # saves a copy of the inputs for when they are needed for backprop
         return inputs @ self.params["w"] + self.params["b"]
 
     def backward(self, grad: Tensor) -> Tensor:
