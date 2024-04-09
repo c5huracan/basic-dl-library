@@ -53,7 +53,7 @@ class Linear(Layer):
         if y = f(x) and x = a @ b + c
         then dy/da = f'(x) @ b.T
         and dy/db = f'(x) @ a.T
-        and dy/dc = f'(x)
+        and dy/dc = f'(x) # summed across the batch dimension
         """
         self.grads["w"] = self.inputs.T @ grad
         self.grads["b"] = np.sum(grad, axis=0)
