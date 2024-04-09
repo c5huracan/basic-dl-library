@@ -69,5 +69,9 @@ class Activation(Layer):
         self.f = f
         self.f_prime = f_prime
 
+    def forward(self, inputs: Tensor) -> Tensor:
+        self.inputs = inputs
+        return self.f(inputs) 
+
 
 
