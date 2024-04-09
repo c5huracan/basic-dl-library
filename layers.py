@@ -2,6 +2,9 @@
 We need a linear layer and an activation layer
 """
 
+from typing import Dict, Callable
+import numpy as np
+import Tensor
 
 class Layer:
     def __init__(self) -> None:
