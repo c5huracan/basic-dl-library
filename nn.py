@@ -10,3 +10,8 @@ from layers import Layer
 class NeuralNet:
     def __init__(self, layers: Sequence[Layer]) -> None:
         self.layers = layers
+
+    def forward(self, inputs: Tensor) -> Tensor:
+        for layer in self.layers:
+            inputs = layer.forward(inputs)
+        return inputs
