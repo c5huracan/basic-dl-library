@@ -4,3 +4,5 @@ I behaves a lot like a layer itself. Although
 we are not going to make it one. 
 """
 from typing import Sequence, Iterator, Tuple
+from tensor import Tensor
+from layers import Layer
