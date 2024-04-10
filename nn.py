@@ -6,3 +6,7 @@ we are not going to make it one.
 from typing import Sequence, Iterator, Tuple
 from tensor import Tensor
 from layers import Layer
+
+class NeuralNet:
+    def __init__(self, layers: Sequence[Layer]) -> None:
+        self.layers = layers
